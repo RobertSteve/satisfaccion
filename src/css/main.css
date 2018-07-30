@@ -1,0 +1,49 @@
+/*
+** Text
+*/
+.text-turquoise{
+    color: #29d3c5 !important;
+}
+.text-orange{
+    color: #f9b34b !important;
+}
+/*
+** Background
+*/
+.bg-turquoise{
+    background-color: #29d3c5 !important;
+}
+.bg-turquoise-soft{
+    background-color: #53c0b7 !important;    
+}
+.bg-turquoise-strong{
+    background-color: #1c8c83 !important; 
+}
+.bg-orange{
+    background-color: #f9b34b !important;
+}
+.bg-rosewood{
+    background-color: #ed5565 !important;
+}
+/*
+/*
+** Font Size
+*/ 
+.fs-15{
+    font-size: 0.9375rem !important;
+}
+.fs-16{
+    font-size: 1rem !important
+}
+.fs-18{
+    font-size: 1.125rem !important;
+}
+.fs-21{
+    font-size: 1.3125rem !important;
+}
+/*
+** width
+*/
+.w-40{
+    width: 40% !important;
+}
