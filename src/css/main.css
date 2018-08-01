@@ -7,6 +7,9 @@
 .text-orange{
     color: #f9b34b !important;
 }
+.text-rosewood{
+    color: #ed5565 !important;
+}
 /*
 ** Background
 */
@@ -19,16 +22,42 @@
 .bg-turquoise-strong{
     background-color: #1c8c83 !important; 
 }
+.bg-turquoise-secondary{
+    background-color: #eefbfa !important;
+}
 .bg-orange{
     background-color: #f9b34b !important;
 }
 .bg-rosewood{
     background-color: #ed5565 !important;
 }
+.bg-amour{
+    background-color: #ffeef0 !important;
+}
+/*
+** Button
+*/
+.btn-satisfaction{
+    width: 45%;
+    height: 55px;
+    border-radius: 0;
+}
+.btn-published{
+    background-color: #ed5565 !important;
+}
+.btn-orange{
+    background-color: #f9b34b !important;
+}
 /*
 /*
 ** Font Size
 */ 
+.fs-13{
+    font-size: 0.8125rem !important;
+}
+.fs-14{
+    font-size: 0.875rem !important;
+}
 .fs-15{
     font-size: 0.9375rem !important;
 }
@@ -41,9 +70,183 @@
 .fs-21{
     font-size: 1.3125rem !important;
 }
+.fs-25{
+    font-size: 1.5625rem !important;
+}
+.fs-30{
+    font-size: 1.875rem !important;
+}
+.fs-32{
+    font-size: 2rem !important;
+}
+.fs-36{
+    font-size: 2.25rem !important;
+}
+.fs-40{
+    font-size: 2.5rem !important;
+}
+.fs-48{
+    font-size: 3rem !important;
+}
+.fs-90{
+    font-size: 5.625rem !important;
+}
+/*
+** Line Height
+*/
+.lh-18{
+    line-height: 1.125rem !important;
+}
+.lh-24{
+    line-height: 1.5rem !important;
+}
+/*
+** Letter Spacing
+*/
+.ls-5{
+    letter-spacing: 0.3125rem !important;
+
+}
 /*
 ** width
 */
 .w-40{
     width: 40% !important;
+}
+/*
+** Display XS
+*/
+@media (max-width: 575px){
+    .d-none{
+        display: none !important;
+    }
+}
+/*
+** Star Activate
+*/
+.star-1 li:nth-child(1){
+    color: #f9b34b;
+}
+.star-2 li:nth-child(1),
+.star-2 li:nth-child(2){
+ color: #f9b34b;
+}
+.star-3 li:nth-child(1),
+.star-3 li:nth-child(2),
+.star-3 li:nth-child(3){
+    color: #f9b34b;
+}
+.star-4 li:nth-child(1),
+.star-4 li:nth-child(2),
+.star-4 li:nth-child(3),
+.star-4 li:nth-child(4){
+    color: #f9b34b;
+}
+.star-5 li:nth-child(1),
+.star-5 li:nth-child(2),
+.star-5 li:nth-child(3),
+.star-5 li:nth-child(4),
+.star-5 li:nth-child(5){
+    color: #f9b34b;
+}
+/*
+** Badge Satisfaction
+*/
+.badge-satisfaction{
+    background-color: #29d3c5;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 9px;
+    line-height: -2px;
+    font-weight: bold;
+    position: absolute;
+    top: -8px;
+    left: 16px;
+}
+.badge-satisfaction--suggestion{
+    left: 24px;
+}
+.activate .badge-satisfaction{
+    background-color: #ffffff;
+    color: #29d3c5;
+}
+/*
+** Card Satisfaction
+*/
+body{
+    color: rgb(113,126,145);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    background-color: #f2f2f2;
+}
+.panel-satisfaction{
+    border-top: 6px solid #29d3c5;
+}
+.navSatisfaction{
+    height: 110px;
+}
+.nav-item-satisfaction{
+    background-color: #eefbfa !important;            
+}
+.nav-item-satisfaction:hover{
+    background-color:#2ad4c6 !important;
+    color: #ffffff;           
+}
+.nav-item-satisfaction:nth-child(2),
+.nav-item-satisfaction:nth-child(3),
+.nav-item-satisfaction:nth-child(4){
+    border-left: 1px solid #c9f2ef;
+}
+.activate{
+    background-color: #2ad4c6 !important;
+    border: 0 !important;
+    position: relative;
+    color: #ffffff;
+}
+.activate:after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid #2ad4c6;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent; 
+}
+.card-satisfaction{
+    border-top: 3px solid #29d3c5;
+}
+
+.card-satisfaction--archived{
+    border-top: 3px solid #ed5565 !important;
+}
+.icon-top{
+    width: 58px;
+    height: 35px;
+}
+.progress-bar-satisfaction{
+    height: 14px;
+}
+.card-img-satisfaction{
+    height: 170px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.card-img-satisfaction:before{
+    content: '';
+    background-color: rgba(59,59,86,0.5);
+    height: 100%;
+    display: block;
+}
+.car-img-satisfaction-content{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }

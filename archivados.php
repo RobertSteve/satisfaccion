@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Publicados</title>
+    <title>Archivados</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -126,7 +126,7 @@
                 <div class="w-100">
                     <div class="row">
                         <ul class="nav nav-pills nav-fill navSatisfaction w-100">
-                            <li class="nav-item nav-item-satisfaction d-flex flex-column justify-content-center align-items-center activate">
+                            <li class="nav-item nav-item-satisfaction d-flex flex-column justify-content-center align-items-center">
                                 <div class="icon-i2 fs-21"></div>
                                 <div class="mb-1 fs-14 lh-18">
                                     Publicados
@@ -147,7 +147,7 @@
                                 <div class="mb-1 fs-14 lh-18">Sugerencias</div>
                                 <div class="font-weight-bold fs-36 lh-24">15</div>
                             </li>
-                            <li class="nav-item nav-item-satisfaction d-flex flex-column justify-content-center align-items-center">
+                            <li class="nav-item nav-item-satisfaction d-flex flex-column justify-content-center align-items-center activate">
                                 <div class="icon-archivados fs-21"></div>
                                 <div class="mb-1 fs-14 lh-18">Archivados</div>
                                 <div class="font-weight-bold fs-36 lh-24">69</div>
@@ -160,7 +160,19 @@
                 <div class="row">
                     <?php for($i=1; $i<=6; $i++){?>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-5 px-2">
-                        <div class="card card-satisfaction">
+                        <div class="card card-satisfaction card-satisfaction--archived">
+                            <div class="card-body bg-amour py-4">
+                                <div class="row">
+                                    <div class="col-2 col-sm-1 d-flex align-items-center">
+                                        <span class="icon-r6 fs-40 text-rosewood"></span>
+                                    </div>
+                                    <div class="col-10 col-sm-11 d-flex flex-column justify-content-center fs-13">
+                                        <span>Paul Vidal</span>
+                                        <span>25/07/2018</span>
+                                        <span>Absurdo</span>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="card-img-top card-img-satisfaction" style="background-image: url('src/img/P2000172.jpg')">
                                 <div class="text-white car-img-satisfaction-content">
                                     <div class="row px-3 h-100">
@@ -185,15 +197,6 @@
                                             </div>
                                         </div>
                                         <div class="col-4 col-sm-3 col-md-3 col-lg-3 col-xl-3 d-flex flex-column align-items-end justify-content-end fs-15 position-relative pl-4">
-                                            <div class="position-absolute icon-top bg-turquoise d-flex justify-content-center align-items-center" style="top: 0; left: 25px">
-                                                <span class="font-weight-bold icon-o5"></span>
-                                            </div>
-                                            <div class="icon-e7 mb-3 w-100 text-turquoise fs-13">
-                                                <span class="text-white font-weight-bold fs-15">40</span> 
-                                            </div>                                           
-                                            <div class="icon-m8 mb-3 w-100 text-turquoise fs-18">                                                 
-                                                <span class="text-white font-weight-bold fs-15">12</span> 
-                                            </div>
                                             <div class="icon-r9 mb-3 w-100 text-turquoise fs-16">                                                 
                                                 <span class="text-white font-weight-bold fs-15">24 D</span> 
                                             </div>
@@ -243,28 +246,6 @@
                                                 170
                                             </div>
                                         </div>    
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="car-body border-top">
-                                <div class="row m-0">
-                                    <div class="col text-center bg-turquoise-secondary fs-13 py-1">
-                                        <span class="icon-r12"></span>
-                                        Copiar URL del Replay
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer bg-white">
-                                <div class="row">
-                                    <div class="col">
-                                        <a name="" id="" class="btn btn-satisfaction bg-orange w-100 d-flex justify-content-center align-items-center text-white" href="#" role="button">
-                                            <span class="icon-r12"></span>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a name="" id="" class="btn btn-satisfaction btn-published w-100 d-flex justify-content-center align-items-center text-white" href="#" role="button">
-                                            <span class="icon-k5"></span>
-                                        </a>                                      
                                     </div>
                                 </div>
                             </div>

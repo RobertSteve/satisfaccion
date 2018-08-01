@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Publicados</title>
+    <title>Aprobados</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -126,14 +126,14 @@
                 <div class="w-100">
                     <div class="row">
                         <ul class="nav nav-pills nav-fill navSatisfaction w-100">
-                            <li class="nav-item nav-item-satisfaction d-flex flex-column justify-content-center align-items-center activate">
+                            <li class="nav-item nav-item-satisfaction d-flex flex-column justify-content-center align-items-center">
                                 <div class="icon-i2 fs-21"></div>
                                 <div class="mb-1 fs-14 lh-18">
                                     Publicados
                                 </div>
                                 <div class="font-weight-bold fs-36 lh-24">34</div>
                             </li>
-                            <li class="nav-item nav-item-satisfaction d-flex flex-column justify-content-center align-items-center">
+                            <li class="nav-item nav-item-satisfaction d-flex flex-column justify-content-center align-items-center activate">
                                 <div class="icon-b2 fs-21 position-relative">
                                     <span class="badge badge-satisfaction">69</span>                                   
                                 </div>
@@ -185,15 +185,6 @@
                                             </div>
                                         </div>
                                         <div class="col-4 col-sm-3 col-md-3 col-lg-3 col-xl-3 d-flex flex-column align-items-end justify-content-end fs-15 position-relative pl-4">
-                                            <div class="position-absolute icon-top bg-turquoise d-flex justify-content-center align-items-center" style="top: 0; left: 25px">
-                                                <span class="font-weight-bold icon-o5"></span>
-                                            </div>
-                                            <div class="icon-e7 mb-3 w-100 text-turquoise fs-13">
-                                                <span class="text-white font-weight-bold fs-15">40</span> 
-                                            </div>                                           
-                                            <div class="icon-m8 mb-3 w-100 text-turquoise fs-18">                                                 
-                                                <span class="text-white font-weight-bold fs-15">12</span> 
-                                            </div>
                                             <div class="icon-r9 mb-3 w-100 text-turquoise fs-16">                                                 
                                                 <span class="text-white font-weight-bold fs-15">24 D</span> 
                                             </div>
@@ -246,24 +237,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="car-body border-top">
-                                <div class="row m-0">
-                                    <div class="col text-center bg-turquoise-secondary fs-13 py-1">
-                                        <span class="icon-r12"></span>
-                                        Copiar URL del Replay
-                                    </div>
-                                </div>
-                            </div>
                             <div class="card-footer bg-white">
                                 <div class="row">
                                     <div class="col">
                                         <a name="" id="" class="btn btn-satisfaction bg-orange w-100 d-flex justify-content-center align-items-center text-white" href="#" role="button">
-                                            <span class="icon-r12"></span>
+                                            <span class="icon-k5"></span>
                                         </a>
                                     </div>
                                     <div class="col">
                                         <a name="" id="" class="btn btn-satisfaction btn-published w-100 d-flex justify-content-center align-items-center text-white" href="#" role="button">
-                                            <span class="icon-k5"></span>
+                                            <span class="icon-archivados"></span>
                                         </a>                                      
                                     </div>
                                 </div>
