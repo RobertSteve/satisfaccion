@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service build --target lib --name Testimonials components/Testimonials.vue",
+    "build": "vue-cli-service build --mode production --target lib"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^3.0.0-rc.5"
+  }
+}
