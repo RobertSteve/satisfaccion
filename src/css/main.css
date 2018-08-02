@@ -76,6 +76,9 @@
 .fs-25{
     font-size: 1.5625rem !important;
 }
+.fs-26{
+    font-size: 1.625rem !important;
+}
 .fs-30{
     font-size: 1.875rem !important;
 }
@@ -102,6 +105,12 @@
 }
 .lh-24{
     line-height: 1.5rem !important;
+}
+.lh-25{
+    line-height: 1.5625rem !important;
+}
+.lh-120{
+    line-height: 7.5rem !important;
 }
 /*
 ** Letter Spacing
@@ -157,13 +166,13 @@
 */
 .badge-satisfaction{
     background-color: #29d3c5;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
     border-radius: 50%;
     color: #ffffff;
-    font-size: 9px;
-    line-height: -2px;
-    font-weight: bold;
+    font-size: 10px;
+    line-height: 18px;
     position: absolute;
     top: -8px;
     left: 16px;
@@ -171,6 +180,7 @@
 .badge-satisfaction--suggestion{
     left: 24px;
 }
+.nav-item-satisfaction:hover .badge,
 .activate .badge-satisfaction{
     background-color: #ffffff;
     color: #29d3c5;

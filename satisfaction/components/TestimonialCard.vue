@@ -1,17 +1,29 @@
 <template>
     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-5 px-2">
-        <div class="card card-satisfaction">
+        <div class="card card-satisfaction card-satisfaction--archived">
+            <div class="card-body bg-amour py-4">
+                <div class="row">
+                    <div class="col-2 d-flex align-items-center justify-content-center">
+                        <span class="icon-binder fs-48 text-rosewood"></span>
+                    </div>
+                    <div class="col-10 d-flex flex-column justify-content-center fs-13">
+                        <span>Paul Vidal</span>
+                        <span>25/07/2018</span>
+                        <span>Absurdo</span>
+                    </div>
+                </div>
+            </div>
             <div class="card-img-top card-img-satisfaction" style="background-image: url('src/img/P2000172.jpg')">
                 <div class="text-white car-img-satisfaction-content">
                     <div class="row px-3 h-100">
                         <div class="col-8 col-sm-9 col-md-9 col-lg-9 col-xl-9 d-flex flex-column justify-content-center">
                             <div class="fs-21">
                                 <ul class="list-inline m-0 text-orange">
-                                    <li class="list-inline-item m-0 icon-i2"></li>
-                                    <li class="list-inline-item m-0 icon-i2"></li>
-                                    <li class="list-inline-item m-0 icon-i2"></li>
-                                    <li class="list-inline-item m-0 icon-i2"></li>
-                                    <li class="list-inline-item m-0 icon-i2"></li>
+                                    <li class="list-inline-item mr-1 icon-star-fill"></li>
+                                    <li class="list-inline-item mr-1 icon-star-fill"></li>
+                                    <li class="list-inline-item mr-1 icon-star-fill"></li>
+                                    <li class="list-inline-item mr-1 icon-star-fill"></li>
+                                    <li class="list-inline-item mr-1 icon-star-fill"></li>
                                 </ul>
                             </div>
                             <div class="text-uppercase font-weight-bold fs-18">
@@ -25,8 +37,22 @@
                             </div>
                         </div>
                         <div class="col-4 col-sm-3 col-md-3 col-lg-3 col-xl-3 d-flex flex-column align-items-end justify-content-end fs-15 position-relative pl-4">
-                            <div class="icon-r9 mb-3 w-100 text-turquoise fs-16">                                                 
-                                <span class="text-white font-weight-bold fs-15">24 D</span> 
+                            <div class="position-absolute icon-top bg-turquoise d-flex justify-content-center align-items-center" style="top: 0; left: 25px">
+                                <span class="icon-laptop fs-25"></span>
+                                <span class="icon-smartphone fs-18 d-none"></span>
+                                <span class="icon-laptop-smartphone fs-25 d-none"></span>
+                            </div>
+                            <div class="icon-eye mb-3 w-100 text-turquoise fs-18">
+                                <span class="text-white font-weight-bold fs-15 lh-18 ml-1">40</span> 
+                            </div>                                           
+                            <div class="icon-play mb-3 w-100 text-turquoise fs-18">                                                 
+                                <span class="text-white font-weight-bold fs-15 lh-18 ml-1">12</span> 
+                            </div>
+                            <div class="icon-calendar mb-3 w-100 text-turquoise fs-18 d-none">                                                 
+                                <span class="text-white font-weight-bold fs-15 lh-18 ml-1">24 D</span> 
+                            </div>
+                            <div class="icon-calendar-clock mb-3 w-100 text-turquoise fs-18">                                                 
+                                <span class="text-white font-weight-bold fs-15 lh-18 ml-1">24 D</span> 
                             </div>
                         </div>
                     </div>
@@ -38,7 +64,8 @@
             <div class="card-body border-top fs-13 bg-white">
                 <div class="row">
                     <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 d-flex flex-fill flex-column justify-content-center align-items-center">
-                        <span class="icon icon-copa mb-1 fs-30"></span>
+                        <span class="icon icon-cup mb-1 fs-30 d-none"></span>
+                        <span class="icon icon-medal mb-1 fs-30"></span>
                         <span class="font-weight-bold fs-18 text-turquoise">ELEPAR</span>
                         <span class="" style="line-height: 7px">Regular</span>
                     </div>
@@ -51,43 +78,66 @@
                         </div>
                         <div class="row w-100 mb-1">
                             <div class="col text-left p-0">
-                                <span class="icon-d8 fs-16"></span>
+                                <span class="icon-people fs-16"></span>
                                 8
                             </div>
                             <div class="col text-center p-0">
-                                <span class="icon-r7 fs-16"></span>
+                                <span class="icon-auto-check fs-16"></span>
                                 1
                             </div>
                             <div class="col text-right p-0">
-                                <span class="icon-m10 fs-16"></span>
+                                <span class="icon-auto-coin fs-16"></span>
                                 1
                             </div>
                         </div>
                         <div class="row w-100 mb-1">
                             <div class="col-5 text-left p-0">
-                                <span class="icon-i6 fs-16"></span>
+                                <span class="icon-moneybag fs-16"></span>
                                 US$ 750
                             </div>
                             <div class="col-7 text-right p-0">
-                                <span class="icon-p10 fs-14"></span>
-                                <span class="icon-credit-vmc fs-13"></span>
+                                <span class="icon-card fs-14"></span>
+                                <span class="icon-vmc-credit fs-13"></span>
                                 170
                             </div>
                         </div>    
                     </div>
                 </div>
             </div>
+            <div class="car-body border-top">
+                <div class="row m-0">
+                    <div class="col text-center bg-turquoise-secondary fs-13 py-1">
+                        <span class="icon-link mr-1 fs-16"></span>
+                        Copiar URL del Replay
+                    </div>
+                </div>
+            </div>
             <div class="card-footer bg-white">
                 <div class="row">
-                    <div class="col">
+                    <div class="col d-none">
+                        <a name="" id="" class="btn btn-satisfaction bg-purple w-100 d-flex justify-content-center align-items-center text-white" href="#" role="button">
+                            <span class="icon-download-img fs-21"></span>
+                        </a>
+                    </div>
+                    <div class="col d-none">
+                        <a name="" id="" class="btn btn-satisfaction bg-rosewood w-100 d-flex justify-content-center align-items-center text-white" href="#" role="button">
+                            <span class="icon-star-crossed-out fs-21"></span>
+                        </a>                                      
+                    </div>
+                    <div class="col d-none">
                         <a name="" id="" class="btn btn-satisfaction bg-orange w-100 d-flex justify-content-center align-items-center text-white" href="#" role="button">
-                            <span class="icon-k5"></span>
+                            <span class="icon-star fs-21"></span>
                         </a>
                     </div>
                     <div class="col">
-                        <a name="" id="" class="btn btn-satisfaction btn-published w-100 d-flex justify-content-center align-items-center text-white" href="#" role="button">
-                            <span class="icon-archivados"></span>
-                        </a>                                      
+                        <a name="" id="" class="btn btn-satisfaction bg-turquoise w-100 d-flex justify-content-center align-items-center text-white" href="#" role="button">
+                            <span class="icon-check fs-21"></span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a name="" id="" class="btn btn-satisfaction bg-rosewood w-100 d-flex justify-content-center align-items-center text-white" role="button" data-toggle="modal" data-target="#exampleModal">
+                            <span class="icon-archived fs-21"></span>
+                        </a>                                   
                     </div>
                 </div>
             </div>
