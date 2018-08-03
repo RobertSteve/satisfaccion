@@ -135,7 +135,7 @@
                         </a>
                     </div>
                     <div class="col">
-                        <a name="" id="" class="btn btn-satisfaction bg-rosewood w-100 d-flex justify-content-center align-items-center text-white" role="button" data-toggle="modal" data-target="#exampleModal">
+                        <a class="btn btn-satisfaction bg-rosewood w-100 d-flex justify-content-center align-items-center text-white" v-on:click="showModal = true">
                             <span class="icon-archived fs-21"></span>
                         </a>                                   
                     </div>
@@ -146,7 +146,15 @@
 </template>
 <script>
     export default {
-        name: 'testimonialCard'
+        name: 'testimonialCard',
+        components: {
+            //
+        },
+        data() {
+            return {
+                //
+            }
+        }
     }
 </script>
 <style>

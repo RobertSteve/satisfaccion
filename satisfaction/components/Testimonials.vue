@@ -2,23 +2,20 @@
     <div class="container-fluid pt-5">
         <testimonials-nav></testimonials-nav>
         <testimonials-grid></testimonials-grid>
-        
     </div>
 </template>
 <script>
     import TestimonialsNav from './TestimonialsNav';
     import TestimonialsGrid from './TestimonialsGrid';
-    import TestimonialModal from './TestimonialModal';
     export default {
         name: 'testimonials',
         components: {
             TestimonialsNav,
-            TestimonialsGrid,
-            TestimonialModal
+            TestimonialsGrid
         },
         data() {
             return {
-                
+                //"showModal": false
             }
         }
     }
