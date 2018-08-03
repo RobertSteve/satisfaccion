@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid pt-5">
-        <testimonials-nav></testimonials-nav>
+        <testimonials-nav @navSelected="navSelected"></testimonials-nav>
         <testimonials-grid></testimonials-grid>
     </div>
 </template>
@@ -15,7 +15,12 @@
         },
         data() {
             return {
-                //"showModal": false
+
+            }
+        },
+        methods: {
+            navSelected: function(option){
+                console.log(option);
             }
         }
     }

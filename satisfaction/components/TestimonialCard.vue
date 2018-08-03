@@ -135,7 +135,7 @@
                         </a>
                     </div>
                     <div class="col">
-                        <a class="btn btn-satisfaction bg-rosewood w-100 d-flex justify-content-center align-items-center text-white" v-on:click="showModal = true">
+                        <a class="btn btn-satisfaction bg-rosewood w-100 d-flex justify-content-center align-items-center text-white" v-on:click="openModal()">
                             <span class="icon-archived fs-21"></span>
                         </a>                                   
                     </div>
@@ -154,7 +154,13 @@
             return {
                 //
             }
+        },
+        methods:{
+            openModal(){
+                this.$emit("openModal");
+            }
         }
+
     }
 </script>
 <style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="modal-mask">
+    <div class="modal-mask" id="testimonialModal">
         <div class="modal-wrapper">
             <div class="modal-container">
                 <div class="modal-header d-flex flex-column align-items-center bg-turquoise-secondary p-5">
@@ -9,20 +9,21 @@
                 <div class="modal-body border-0">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Motivo:</label>
-                        <select class="form-control" name="" id="">
+                        <select class="form-control" name="" id="" v-model="reason">
                             <option value="">Seleccionar</option>
+                            <option v-for="reason in reasons" :value="reason.id">{{reason.description}}</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Otro Motivo:</label>
-                        <textarea class="form-control" name="" id="" cols="30" rows="4"></textarea>
+                        <label for="exampleInputPassword1 text-black-50">Otro Motivo:</label>
+                        <textarea class="form-control" name="" id="" cols="30" rows="4" readonly></textarea>
                     </div>
                 </div>
                 <div class="modal-footer d-flex flex-column">
                     <a name="" id="" class="btn btn-satisfaction bg-rosewood w-50 d-flex justify-content-center align-items-center text-white" role="button" data-toggle="modal" data-target="#exampleModal">
-                        <span class="icon-archived"></span>
+                        <span class="icon-archived fs-21"></span>
                     </a> 
-                    <a class="btn btn-link" role="button" @click="$emit('close')">Cancelar</a>
+                    <a class="btn btn-link" role="button" @click="closeModal()">Cancelar</a>
                 </div>
             </div>
         </div>
@@ -30,20 +31,34 @@
 </template>
 
 <script>
-export default {
-    name: 'testimonialModal',
-    components:{
-
-    },
-    data(){
-        return {
-            
+    import axios from 'axios';
+    export default {
+        name: 'testimonialModal',
+        components:{
+            //
+        },
+        data () {
+            return {
+                showModal: true,
+                reasons: [],
+                reason: 5
+            }
+        },
+        methods:{
+            listReason: function(){
+                axios.get('https://5702bffc.ngrok.io/motivo').then((response) => {
+                    this.reasons = response.data.data;
+                    console.log(this.reasons);
+                })
+            },
+            closeModal(){
+                this.$emit("closeModal");
+            }
+        }, 
+        mounted: function() {
+            this.listReason();
         }
-    },
-    methods:{
-
     }
-}
 </script>
 
 <style>
@@ -56,7 +71,7 @@ export default {
         height: 100%;
         background-color: rgba(0, 0, 0, .5);
         display: table;
-        transition: opacity .3s ease;
+        transition: opacity .5s ease;
     }
     .modal-wrapper {
         display: table-cell;
@@ -68,8 +83,7 @@ export default {
         background-color: #fff;
         border-radius: 2px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-        transition: all .3s ease;
-        font-family: Helvetica, Arial, sans-serif;
+        transition: all .5s ease;
     }
 
     .modal-header h3 {

@@ -1,5 +1,5 @@
 <template>
-    <li class="nav-item nav-item-satisfaction d-flex flex-column justify-content-center align-items-center">
+    <li @click="click" class="nav-item nav-item-satisfaction d-flex flex-column justify-content-center align-items-center" :class="active ? 'activate' : ''" ><!--@click="selectionOption(navType)" -->
         <div class="position-relative" :class="[icon, fs]">
             <span class="badge badge-satisfaction text-center" :class="badge" v-show="last_week > 0">{{ last_week }}</span>
         </div>
@@ -21,6 +21,10 @@
             last_week: {
                 type: Number,
                 default: 0
+            },
+            active: {
+                type: Boolean,
+                default: true
             }
         },
         name: 'testimonialsNavElement',
@@ -32,6 +36,12 @@
                 title: '',
                 badge: '',
                 fs: ''
+            }
+        },
+        methods:{
+            click: function (e) {this.$emit('click', e)},
+            selectionOption: function(option){
+                this.$emit("navSelected", option);
             }
         },
         computed: {

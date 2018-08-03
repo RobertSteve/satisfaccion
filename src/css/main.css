@@ -176,6 +176,7 @@
     position: absolute;
     top: -8px;
     left: 16px;
+    font-family: "Open Sans", sans-serif;
 }
 .badge-satisfaction--suggestion{
     left: 24px;
@@ -190,7 +191,7 @@
 */
 body{
     color: rgb(113,126,145);
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
     background-color: #f2f2f2;
 }
@@ -270,4 +271,17 @@ body{
     -webkit-box-flex: 0;
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
+}
+/*
+** Hover Estrella
+*/
+#filterStar .row{
+    transition: all .3s ease-in-out;
+}
+#filterStar:hover .row{
+    opacity: 0.3;
+}
+#filterStar .row:hover{
+    opacity: 1 !important;
+    cursor: pointer;
 }

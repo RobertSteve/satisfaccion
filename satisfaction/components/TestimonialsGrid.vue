@@ -2,10 +2,10 @@
     <div>
         <div class="container-fluid mt-5">
             <div class="row">
-                <testimonial-card v-for="card in cards"></testimonial-card>
+                <testimonial-card v-for="card in cards" @openModal="openModal"></testimonial-card>
             </div>
         </div>
-        <testimonial-modal v-if="showModal" @close="showModal = false"></testimonial-modal>
+        <testimonial-modal v-if="showModal" @closeModal="closeModal"></testimonial-modal><!--@close="showModal = false"-->
     </div>
 </template>
 <script>
@@ -20,9 +20,18 @@
         data() {
             return {
                 cards: [1,2,3,4],
-                "showModal": false
+                showModal: false
+            }
+        },
+        methods: {
+            openModal(){
+                this.showModal = true;
+            },
+            closeModal(){
+                this.showModal = false;
             }
         }
+
     }
 </script>
 <style>

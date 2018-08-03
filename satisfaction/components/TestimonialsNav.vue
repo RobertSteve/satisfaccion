@@ -18,10 +18,10 @@
                             <li class="list-inline-item mr-1 icon-star-fill"></li>
                         </ul>
                     </div>
-                    <div>725</div>
+                    <div>{{satisfaction.rating.total}}</div>
                 </div>
             </div>
-            <div class="col-12 col-md-5 col-lg-4 col-xl-4 d-flex flex-column justify-content-center align-items-center p-0 mt-3">
+            <div class="col-12 col-md-5 col-lg-4 col-xl-4 d-flex flex-column justify-content-center align-items-center p-0 mt-3" id="filterStar">
                 <div class="row w-100">
                     <div class="col-5">
                         <ul class="list-inline m-0 text-right star-5 d-flex flex-row-reverse">
@@ -113,10 +113,10 @@
         <div class="w-100">            
             <div class="row">
                 <ul class="nav nav-pills nav-fill navSatisfaction w-100">
-                    <testimonials-nav-element nav-type="published" :total="reviews.published.total" :last_week="reviews.published.last_week"></testimonials-nav-element>
-                    <testimonials-nav-element nav-type="approved" :total="reviews.approved.total" :last_week="reviews.approved.last_week"></testimonials-nav-element>
-                    <testimonials-nav-element nav-type="suggestion" :total="reviews.suggestion.total" :last_week="reviews.suggestion.last_week"></testimonials-nav-element>
-                    <testimonials-nav-element nav-type="archived" :total="reviews.archived.total" :last_week="reviews.archived.last_week"></testimonials-nav-element>
+                    <testimonials-nav-element nav-type="published" :total="reviews.published.total" :last_week="reviews.published.last_week" v-on:click="activateNav('published')" :active="activeNav == 'published'"></testimonials-nav-element><!--@navSelected="navSelected"-->
+                    <testimonials-nav-element nav-type="approved" :total="reviews.approved.total" :last_week="reviews.approved.last_week"  v-on:click="activateNav('approved')" :active="activeNav == 'approved'"></testimonials-nav-element><!--@navSelected="navSelected"-->
+                    <testimonials-nav-element nav-type="suggestion" :total="reviews.suggestion.total" :last_week="reviews.suggestion.last_week"  v-on:click="activateNav('suggestion')" :active="activeNav == 'suggestion'"></testimonials-nav-element><!--@navSelected="navSelected"-->
+                    <testimonials-nav-element nav-type="archived" :total="reviews.archived.total" :last_week="reviews.archived.last_week"  v-on:click="activateNav('archived')" :active="activeNav == 'archived'"></testimonials-nav-element><!--@navSelected="navSelected"-->
                 </ul>
             </div>
         </div>
@@ -130,12 +130,21 @@
         components: {
             TestimonialsNavElement
         },
+        watch: {
+            'activeNav': function (val, oldVal){
+                if (val != oldVal) {
+                    this.getTestimonials()
+                }
+            }
+        },
         data() {
             return {
+                "activeNav": "published",
                 "satisfaction": {
                     "rating": {
                         "average": 4.4,
                         "descripcion": "MUY BUENO",
+                        "total": 765,
                         "details": {
                             "stars_5": {
                                 "quantity": 469,
@@ -182,9 +191,20 @@
             }
         },
         methods:{
-            sumaryVMC: function (){
-                axios.get('http://0014d0f6.ngrok.io/jsondata').then((response) => {
+            activateNav(val) {
+                this.activeNav = val
+            },
+            getSummary: function (){
+                axios.get('https://5702bffc.ngrok.io/summary').then((response) => {
                     this.satisfaction = response.data.data;
+                    console.log(response.data.data)
+                }, (error) => {
+                    console.log(error);
+                })
+            },
+            getTestimonials: function (){
+                axios.get('https://5702bffc.ngrok.io/jsondata?'+this.activeNav).then((response) => {
+                    //this.satisfaction = response.data.data;
                     console.log(response)
                 }, (error) => {
                     console.log(error);
@@ -192,7 +212,8 @@
             }
         },
         mounted: function () {
-            this.sumaryVMC()
+            this.getSummary()
+            this.getTestimonials()
         }
     }
 </script>
