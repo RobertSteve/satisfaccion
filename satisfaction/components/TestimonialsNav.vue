@@ -3,7 +3,7 @@
         <div class="row my-5">
             <div class="col-12 col-md-3 col-lg-4 col-xl-4 d-flex flex-column justify-content-center pl-5 fs-36">
                 <span>Satisfacción</span>
-                <span class="font-weight-bold">VMC</span>
+                <span class="font-weight-bold">{{ owner }}</span>
             </div>
             <div class="col-12 col-md-4 col-lg-4 col-xl-4 d-flex flex-column justify-content-center align-items-center">
                 <span class="fs-90 ls-5 lh-120">{{satisfaction.rating.average}}</span>
@@ -22,92 +22,11 @@
                 </div>
             </div>
             <div class="col-12 col-md-5 col-lg-4 col-xl-4 d-flex flex-column justify-content-center align-items-center p-0 mt-3" id="filterStar">
-                <div class="row w-100">
-                    <div class="col-5">
-                        <ul class="list-inline m-0 text-right star-5 d-flex flex-row-reverse">
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                        </ul>
-                    </div>
-                    <div class="col-5 progress p-0 mt-1 progress-bar-satisfaction" >
-
-                        <div class="progress-bar bg-turquoise" role="progressbar" v-bind:style="{width: satisfaction.rating.details.stars_5.percentage}" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="col-2">
-                        {{satisfaction.rating.details.stars_5.quantity}}
-                    </div>
-                </div>
-                <div class="row w-100">
-                    <div class="col-5">
-                        <ul class="list-inline m-0 text-right star-4 d-flex flex-row-reverse">
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                        </ul>
-                    </div>
-                    <div class="col-5 progress p-0 mt-1 progress-bar-satisfaction" >
-                        <div class="progress-bar bg-turquoise-soft" role="progressbar" v-bind:style="{width: satisfaction.rating.details.stars_4.percentage}" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="col-2">
-                        {{satisfaction.rating.details.stars_4.quantity}}
-                    </div>
-                </div>
-                <div class="row w-100">
-                    <div class="col-5">
-                        <ul class="list-inline m-0 text-right star-3 d-flex flex-row-reverse">
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                        </ul>
-                    </div>
-                    <div class="col-5 progress p-0 mt-1 progress-bar-satisfaction" >
-                        <div class="progress-bar bg-turquoise-strong" role="progressbar" v-bind:style="{width: satisfaction.rating.details.stars_3.percentage}" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="col-2">
-                        {{satisfaction.rating.details.stars_3.quantity}}
-                    </div>
-                </div>
-                <div class="row w-100">
-                    <div class="col-5">
-                        <ul class="list-inline m-0 text-right star-2 d-flex flex-row-reverse">
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                        </ul>
-                    </div>
-                    <div class="col-5 progress p-0 mt-1 progress-bar-satisfaction" >
-                        <div class="progress-bar bg-orange" role="progressbar" v-bind:style="{width: satisfaction.rating.details.stars_2.percentage}" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="col-2">
-                        {{satisfaction.rating.details.stars_2.quantity}}
-                    </div>
-                </div>
-                <div class="row w-100">
-                    <div class="col-5">
-                        <ul class="list-inline m-0 text-right star-1 d-flex flex-row-reverse">
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                            <li class="list-inline-item m-1 icon-star-fill"></li>
-                        </ul>
-                    </div>
-                    <div class="col-5 progress p-0 mt-1 progress-bar-satisfaction" >
-                        <div class="progress-bar bg-rosewood" role="progressbar" v-bind:style="{width: satisfaction.rating.details.stars_1.percentage}" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="col-2">
-                        {{satisfaction.rating.details.stars_1.quantity}}
-                    </div>
-                </div>
+                <rating-row @click="filterOnlyRating(5)" :filter="ratingFiltered" :rating="5" :count="satisfaction.rating.details.stars_5.quantity" :percentage="satisfaction.rating.details.stars_5.percentage"></rating-row> 
+                <rating-row @click="filterOnlyRating(4)" :filter="ratingFiltered" :rating="4" :count="satisfaction.rating.details.stars_4.quantity" :percentage="satisfaction.rating.details.stars_4.percentage"></rating-row> 
+                <rating-row @click="filterOnlyRating(3)" :filter="ratingFiltered" :rating="3" :count="satisfaction.rating.details.stars_3.quantity" :percentage="satisfaction.rating.details.stars_3.percentage"></rating-row> 
+                <rating-row @click="filterOnlyRating(2)" :filter="ratingFiltered" :rating="2" :count="satisfaction.rating.details.stars_2.quantity" :percentage="satisfaction.rating.details.stars_2.percentage"></rating-row> 
+                <rating-row @click="filterOnlyRating(1)" :filter="ratingFiltered" :rating="1" :count="satisfaction.rating.details.stars_1.quantity" :percentage="satisfaction.rating.details.stars_1.percentage"></rating-row>               
             </div>
         </div>
         <div class="w-100">            
@@ -125,20 +44,25 @@
 <script>
     import axios from 'axios';
     import TestimonialsNavElement from './TestimonialsNavElement';
+    import RatingRow from './RatingRow';
     export default {
         name: 'testimonialsNav',
         components: {
-            TestimonialsNavElement
+            TestimonialsNavElement,
+            RatingRow
+        },
+        props: {
+            owner: {
+                type: String,
+                default: 'VMC',
+            }
         },
         watch: {
-            'activeNav': function (val, oldVal){
-                if (val != oldVal) {
-                    this.getTestimonials()
-                }
-            }
+            //
         },
         data() {
             return {
+                "ratingFiltered": null,
                 "activeNav": "published",
                 "satisfaction": {
                     "rating": {
@@ -148,7 +72,7 @@
                         "details": {
                             "stars_5": {
                                 "quantity": 469,
-                                "percentage": "100%"
+                                "percentage": 100
                             },
                             "stars_4": {
                                 "quantity": 193,
@@ -191,18 +115,33 @@
             }
         },
         methods:{
-            activateNav(val) {
-                this.activeNav = val
+            filterOnlyRating(rating) {                
+                if (rating == this.ratingFiltered) {
+                    this.ratingFiltered = null;
+                }else {
+                    this.ratingFiltered = rating;
+                }
+                this.getTestimonials();
+            },
+            activateNav(nav) {
+                if (nav != this.activeNav) {
+                    this.activeNav = nav;
+                    this.ratingFiltered = null;
+                    this.getTestimonials();
+                }
             },
             getSummary: function (){
+                console.log('getSummary')
                 axios.get('https://5702bffc.ngrok.io/summary').then((response) => {
                     this.satisfaction = response.data.data;
                     console.log(response.data.data)
+                    this.getTestimonials();
                 }, (error) => {
                     console.log(error);
                 })
             },
             getTestimonials: function (){
+                console.log('getTestimonials')
                 axios.get('https://5702bffc.ngrok.io/jsondata?'+this.activeNav).then((response) => {
                     //this.satisfaction = response.data.data;
                     console.log(response)
@@ -213,7 +152,6 @@
         },
         mounted: function () {
             this.getSummary()
-            this.getTestimonials()
         }
     }
 </script>

@@ -10,6 +10,9 @@
 .text-rosewood{
     color: #ed5565 !important;
 }
+.text-gray{
+    color: rgb(113,126,145) !important;
+}
 /*
 ** Background
 */
@@ -124,6 +127,12 @@
 */
 .w-40{
     width: 40% !important;
+}
+/*
+** cursor
+*/
+.cursor-pointer{
+    cursor: pointer !important;
 }
 /*
 ** Display XS
@@ -284,4 +293,11 @@ body{
 #filterStar .row:hover{
     opacity: 1 !important;
     cursor: pointer;
+}
+#filterStar .row.filtered{
+    opacity: 1 !important;
+    cursor: pointer;
+}
+#filterStar .row.unfiltered{
+    opacity: 0.3;
 }
